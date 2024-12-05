@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Website</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Book Now</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li class="searchbar">
+        <input type="text" placeholder="Search...">
+      </li>
+    </ul>
+  </nav>
+
+  <section class="image-gallery-section">
+    <h2>Explore Our Services</h2>
+    <div class="image-gallery">
+      <img src="image/cebb.jpg" alt="Image 1" class="gallery-img" data-link="page1.html">
+      <img src="image/cebu.jpg" alt="Image 2" class="gallery-img" data-link="page2.html">
+      <img src="image/shabu.jpg" alt="Image 3" class="gallery-img" data-link="page3.html">
+    </div>
+  </section>
+
+  <section class="image-description">
+    <div class="image-container">
+      <img src="image1.jpg" alt="Image 1">
+    </div>
+    <div class="description-text">
+      <h3>About Our Website</h3>
+      <p>We offer easy booking solutions with a user-friendly interface. Book your services now with just a few clicks.</p>
+    </div>
+  </section>
+
+  <section class="image-description reverse">
+    <div class="image-container">
+      <img src="image2.jpg" alt="Image 2">
+    </div>
+    <div class="description-text">
+      <h3>Why Choose Us?</h3>
+      <p>Our platform is fast, secure, and easy to use. Whether you're looking to book a service or explore, we make it simple.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="#" class="social-icon"><img src="discord-icon.png" alt="Discord"></a>
+    </div>
+    <p>&copy; 2024 Your Website Name</p>
+  </footer>
+
+  <div class="image-modal" id="image-modal">
+    <div class="modal-content">
+      <img src="" alt="Expanded Image" id="modal-image">
+      <a href="#" class="redirect-btn" id="redirect-btn">Explore More</a>
+    </div>
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    const redirectBtn = document.getElementById('redirect-btn');
+
+    galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+        const imageUrl = image.src;
+        const redirectLink = image.getAttribute('data-link');
+
+        modalImage.src = imageUrl;
+        redirectBtn.href = redirectLink;
+        modal.style.display = 'flex';
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
