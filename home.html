@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking Website</title>
   <link rel="stylesheet" href="home.css">
+  <script src="https://kit.fontawesome.com/1a7f906912.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">Logo</div>
+    <div class="logo">BookHaven</div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Book Now</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
       <li class="searchbar">
         <input type="text" placeholder="Search...">
       </li>
@@ -22,70 +23,116 @@
   <section class="image-gallery-section">
     <h2>Explore Our Services</h2>
     <div class="image-gallery">
-      <img src="image/cebb.jpg" alt="Image 1" class="gallery-img" data-link="page1.html">
-      <img src="image/cebu.jpg" alt="Image 2" class="gallery-img" data-link="page2.html">
-      <img src="image/shabu.jpg" alt="Image 3" class="gallery-img" data-link="page3.html">
+      <label for="modal1">
+        <img src="image/plane.jpg" alt="Image 1" class="gallery-img">
+      </label>
+      <label for="modal2">
+        <img src="image/bus.jpg" alt="Image 2" class="gallery-img">
+      </label>
+      <label for="modal3">
+        <img src="image/taxi.avif" alt="Image 3" class="gallery-img">
+      </label>
+      <label for="modal4">
+        <img src="image/hotel.jpg" alt="Image 4" class="gallery-img">
+      </label>
+      <label for="modal5">
+        <img src="image/food.avif" alt="Image 5" class="gallery-img">
+      </label>
     </div>
   </section>
 
   <section class="image-description">
     <div class="image-container">
-      <img src="image1.jpg" alt="Image 1">
+      <img src="image/comms.jpg" alt="About Us">
     </div>
     <div class="description-text">
       <h3>About Our Website</h3>
-      <p>We offer easy booking solutions with a user-friendly interface. Book your services now with just a few clicks.</p>
+      <p>BookHaven is an all-in-one booking platform designed to simplify travel and dining arrangements. From booking taxis, buses, and flights to reserving hotels and food buffets, we bring everything you need under one roof. Our easy-to-use interface ensures a smooth and hassle-free experience, whether you’re planning a quick trip or a full vacation. With reliable services and competitive pricing, BookHaven is your trusted companion for effortless travel planning. Discover convenience, save time, and enjoy stress-free journeys with BookHaven!</p>
     </div>
   </section>
 
   <section class="image-description reverse">
     <div class="image-container">
-      <img src="image2.jpg" alt="Image 2">
+      <img src="image/easy.jpg" alt="Why Choose Us">
     </div>
     <div class="description-text">
-      <h3>Why Choose Us?</h3>
-      <p>Our platform is fast, secure, and easy to use. Whether you're looking to book a service or explore, we make it simple.</p>
+      <h3>Why Choose BookHaven?</h3>
+      <p>Why Choose BookHaven? BookHaven is your go-to platform for all your travel and booking needs, offering everything from taxis and buses to flights, hotels, and food buffets. We simplify your planning process with an intuitive interface that saves time and ensures a hassle-free experience. By partnering with trusted providers, we guarantee reliable services and the best deals, making your travel affordable and seamless. Whether you’re planning a quick trip or a grand vacation, BookHaven combines convenience, competitive pricing, and efficiency to create the ultimate travel solution. Choose BookHaven and make every journey effortless!</p>
+    </div>
+  </section>
+
+  <section class="members">
+    <h2>Meet Our Team</h2>
+    <div class="member-list">
+      <div class="member-profile">
+        <img src="image/maloloyon.jpg" alt="Maloloy-on">
+        <h4>Maloloy-on, Francis Anthony B.</h4>
+      </div>
+      <div class="member-profile">
+        <img src="image/atoy.jpg" alt="Atoy">
+        <h4>Atoy, Jasmine S.</h4>
+      </div>
+      <div class="member-profile">
+        <img src="image/camajalan.jpg" alt="Camajalan">
+        <h4>Camajalan Andrie Steven T.</h4>
+      </div>
     </div>
   </section>
 
   <footer>
-    <div class="footer-socials">
-      <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
-      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
-      <a href="#" class="social-icon"><img src="discord-icon.png" alt="Discord"></a>
+    <div class="footer-container">
+      <div class="footer-socials">
+        <a href="" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </div>
-    <p>&copy; 2024 Your Website Name</p>
   </footer>
 
-  <div class="image-modal" id="image-modal">
+  <input type="checkbox" id="modal1" class="modal-toggle">
+  <div class="image-modal">
     <div class="modal-content">
-      <img src="" alt="Expanded Image" id="modal-image">
-      <a href="#" class="redirect-btn" id="redirect-btn">Explore More</a>
+      <label for="modal1" class="close-btn">&times;</label>
+      <img src="image/planes.jpg" alt="Expanded Image">
+      <a href="booking.html" class="explore-btn">Explore More</a>
     </div>
   </div>
 
-  <script>
-    const galleryImages = document.querySelectorAll('.gallery-img');
-    const modal = document.getElementById('image-modal');
-    const modalImage = document.getElementById('modal-image');
-    const redirectBtn = document.getElementById('redirect-btn');
+  <input type="checkbox" id="modal2" class="modal-toggle">
+  <div class="image-modal">
+    <div class="modal-content">
+      <label for="modal2" class="close-btn">&times;</label>
+      <img src="image/buss.jpg" alt="Expanded Image">
+      <a href="booking.html" class="explore-btn">Explore More</a>
+    </div>
+  </div>
 
-    galleryImages.forEach(image => {
-      image.addEventListener('click', () => {
-        const imageUrl = image.src;
-        const redirectLink = image.getAttribute('data-link');
+  <input type="checkbox" id="modal3" class="modal-toggle">
+  <div class="image-modal">
+    <div class="modal-content">
+      <label for="modal3" class="close-btn">&times;</label>
+      <img src="image/tax.jpg" alt="Expanded Image">
+      <a href="booking.html" class="explore-btn">Explore More</a>
+    </div>
+  </div>
 
-        modalImage.src = imageUrl;
-        redirectBtn.href = redirectLink;
-        modal.style.display = 'flex';
-      });
-    });
+  <input type="checkbox" id="modal4" class="modal-toggle">
+  <div class="image-modal">
+    <div class="modal-content">
+      <label for="modal4" class="close-btn">&times;</label>
+      <img src="image/hotell.webp" alt="Expanded Image">
+      <a href="booking.html" class="explore-btn">Explore More</a>
+    </div>
+  </div>
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
+  <input type="checkbox" id="modal5" class="modal-toggle">
+  <div class="image-modal">
+    <div class="modal-content">
+      <label for="modal5" class="close-btn">&times;</label>
+      <img src="image/foodd.jpg" alt="Expanded Image">
+      <a href="booking.html" class="explore-btn">Explore More</a>
+    </div>
+  </div>
 </body>
 </html>

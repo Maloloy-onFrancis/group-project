@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Section</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">BookHaven</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li class="searchbar">
+        <input type="text" placeholder="Search...">
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Booking Section -->
+  <section class="booking-section">
+    <h1>Choose Your Booking Option</h1>
+    <div class="booking-options">
+      <div class="option">
+        <img src="image/bus.jpg" alt="Bus" class="preview-img">
+        <a href="#bus-schedule" class="button">Bus</a>
+      </div>
+      <div class="option">
+        <img src="image/plane.jpg" alt="Plane" class="preview-img">
+        <a href="#plane-schedule" class="button">Plane</a>
+      </div>
+      <div class="option">
+        <img src="image/hotel.jpg" alt="Hotel" class="preview-img">
+        <a href="#hotel-schedule" class="button">Hotel</a>
+      </div>
+      <div class="option">
+        <img src="image/food.avif" alt="Buffet" class="preview-img">
+        <a href="#buffet-schedule" class="button">Buffet</a>
+      </div>
+      <div class="option">
+        <img src="image/taxi.avif" alt="Taxi" class="preview-img">
+        <a href="#taxi-schedule" class="button">Taxi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bus Schedule Section -->
+  <section class="schedule-section" id="bus-schedule">
+    <h1>Bus Schedule</h1>
+    <form action="#thankyou">
+      <label for="bus-location">Location:</label>
+      <input type="text" id="bus-location" name="bus-location" placeholder="Enter location" required>
+
+      <label for="bus-date">Date:</label>
+      <input type="date" id="bus-date" name="bus-date" required>
+
+      <label for="bus-time">Time:</label>
+      <input type="time" id="bus-time" name="bus-time" required>
+
+      <button type="submit">Confirm</button>
+    </form>
+    <a href="#reset" class="reset-button">Reset</a>
+  </section>
+
+  <!-- Plane Schedule Section -->
+  <section class="schedule-section" id="plane-schedule">
+    <h1>Plane Schedule</h1>
+    <form action="#thankyou">
+      <label for="plane-location">Location:</label>
+      <input type="text" id="plane-location" name="plane-location" placeholder="Enter location" required>
+
+      <label for="plane-type">Flight Type:</label>
+      <select id="plane-type" name="plane-type" required>
+        <option value="regular">Regular - 10,000</option>
+        <option value="vip">VIP - 25,000</option>
+      </select>
+
+      <label for="plane-date">Date:</label>
+      <input type="date" id="plane-date" name="plane-date" required>
+
+      <label for="plane-time">Time:</label>
+      <input type="time" id="plane-time" name="plane-time" required>
+
+      <button type="submit">Confirm</button>
+    </form>
+    <a href="#reset" class="reset-button">Reset</a>
+  </section>
+
+  <!-- Hotel Schedule Section -->
+  <section class="schedule-section" id="hotel-schedule">
+    <h1>Hotel Schedule</h1>
+    <form action="#thankyou">
+      <label for="hotel-date">Date:</label>
+      <input type="date" id="hotel-date" name="hotel-date" required>
+
+      <label for="hotel-price">Price:</label>
+      <select id="hotel-price" name="hotel-price" required>
+        <option value="1000">1,000 per Night</option>
+        <option value="5000">5,000 per Week</option>
+        <option value="27000">27,000 per Month</option>
+      </select>
+
+      <label for="hotel-location">Hotel Name:</label>
+      <input type="text" id="hotel-location" name="hotel-location" placeholder="Enter hotel name" required>
+
+      <button type="submit">Confirm</button>
+    </form>
+    <a href="#reset" class="reset-button">Reset</a>
+  </section>
+
+  <!-- Buffet Schedule Section -->
+  <section class="schedule-section" id="buffet-schedule">
+    <h1>Buffet Schedule</h1>
+    <form action="#thankyou">
+      <label for="buffet-date">Date:</label>
+      <input type="date" id="buffet-date" name="buffet-date" required>
+
+      <label for="buffet-price">Price:</label>
+      <select id="buffet-price" name="buffet-price" required>
+        <option value="100">100 Single Meal</option>
+        <option value="1200">1,200 Family Meal</option>
+        <option value="5000">5,000 Full Buffet</option>
+      </select>
+
+      <label for="buffet-location">Buffet Location:</label>
+      <input type="text" id="buffet-location" name="buffet-location" placeholder="Enter location" required>
+
+      <button type="submit">Confirm</button>
+    </form>
+    <a href="#reset" class="reset-button">Reset</a>
+  </section>
+
+  <!-- Taxi Schedule Section -->
+  <section class="schedule-section" id="taxi-schedule">
+    <h1>Taxi Schedule</h1>
+    <form action="#thankyou">
+      <label for="taxi-location">Location:</label>
+      <input type="text" id="taxi-location" name="taxi-location" placeholder="Enter location" required>
+
+      <label for="taxi-date">Date:</label>
+      <input type="date" id="taxi-date" name="taxi-date" required>
+
+      <label for="taxi-time">Time:</label>
+      <input type="time" id="taxi-time" name="taxi-time" required>
+
+      <button type="submit">Confirm</button>
+    </form>
+    <a href="#reset" class="reset-button">Reset</a>
+  </section>
+
+  <!-- Thank You Section -->
+  <section class="thankyou-section" id="thankyou">
+    <h1>Thank You for Booking at My Booking Name!</h1>
+    <p>We look forward to serving you.</p>
+    <a href="#reset" class="back-button">Back to Home</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Booking Platform. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
